@@ -1,0 +1,55 @@
+.createContact_container {
+  position: sticky;
+  top: 10px;
+}
+
+.inputField {
+  width: 85%;
+}
+
+.textField {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.btn_container {
+  margin-top: 20px;
+}
+
+.btn_submitForm {
+  width: 85%;
+  padding: 10px !important;
+}
+
+.errorField fieldset {
+  border-color: red !important;
+}
+
+.errorText {
+  font-size: 12px;
+  color: red;
+}
+
+@media screen and (max-width: 768px) {
+  .createContact_container {
+    position: relative;
+    width: 350px;
+    margin-left: 16px;
+  }
+
+  .inputField {
+    width: 300px;
+  }
+
+  .btn_container {
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+
+  .btn_submitForm {
+    width: 300px;
+    padding: 10px !important;
+  }
+}
