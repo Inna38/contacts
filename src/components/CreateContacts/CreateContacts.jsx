@@ -13,6 +13,7 @@ const CreateContacts = () => {
   const [postContact] = usePostContactMutation();
 
   const [errorField, setErrorField] = useState({});
+  const [disabled, setDisabled] = useState(true);
 
   const [formData, setFormData] = useState({
     avatar_url: "https://live.devnimble.com/api/avatars/person_default",
@@ -75,6 +76,13 @@ const CreateContacts = () => {
         },
       ],
     });
+    if (
+      formData?.fields["first name"][0]?.value?.length > 0 &&
+      formData?.fields["last name"][0]?.value?.length > 0 &&
+      formData?.fields?.email[0]?.value?.length > 0
+    ) {
+      setDisabled(false);
+    }
   };
 
   const handleSubmitForm = async (e) => {
@@ -119,6 +127,7 @@ const CreateContacts = () => {
 
         setErrorField(errorsMap);
       });
+    setDisabled(true);
   };
 
   return (
@@ -185,6 +194,7 @@ const CreateContacts = () => {
           <Button
             type="submit"
             variant="outlined"
+            disabled={disabled ? true : false}
             className={css.btn_submitForm}
           >
             Add Contact

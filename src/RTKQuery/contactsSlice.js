@@ -5,7 +5,7 @@ export const contactsApi = createApi({
 
   baseQuery: fetchBaseQuery({
     baseUrl:
-      "https://thingproxy.freeboard.io/fetch/https://live.devnimble.com/api",
+      " https://cors-anywhere.herokuapp.com/https://live.devnimble.com/api",
   }),
 
   endpoints: (builder) => ({
